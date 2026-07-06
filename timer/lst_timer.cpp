@@ -3,8 +3,8 @@
 
 sort_timer_lst::sort_timer_lst()
 {
-    head = NULL;
-    tail = NULL;
+    head = nullptr;
+    tail = nullptr;
 }
 sort_timer_lst::~sort_timer_lst()
 {
@@ -51,8 +51,8 @@ void sort_timer_lst::adjust_timer(util_timer *timer)
     if (timer == head)
     {
         head = head->next;
-        head->prev = NULL;
-        timer->next = NULL;
+        head->prev = nullptr;
+        timer->next = nullptr;
         add_timer(timer, head);
     }
     else
@@ -71,21 +71,21 @@ void sort_timer_lst::del_timer(util_timer *timer)
     if ((timer == head) && (timer == tail))
     {
         delete timer;
-        head = NULL;
-        tail = NULL;
+        head = nullptr;
+        tail = nullptr;
         return;
     }
     if (timer == head)
     {
         head = head->next;
-        head->prev = NULL;
+        head->prev = nullptr;
         delete timer;
         return;
     }
     if (timer == tail)
     {
         tail = tail->prev;
-        tail->next = NULL;
+        tail->next = nullptr;
         delete timer;
         return;
     }
@@ -112,7 +112,7 @@ void sort_timer_lst::tick()
         head = tmp->next;
         if (head)
         {
-            head->prev = NULL;
+            head->prev = nullptr;
         }
         delete tmp;
         tmp = head;
@@ -140,7 +140,7 @@ void sort_timer_lst::add_timer(util_timer *timer, util_timer *lst_head)
     {
         prev->next = timer;
         timer->prev = prev;
-        timer->next = NULL;
+        timer->next = nullptr;
         tail = timer;
     }
 }
