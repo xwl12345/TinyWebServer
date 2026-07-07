@@ -4,6 +4,16 @@ TinyWebServer
 ===============
 Linux下C++轻量级Web服务器，助力初学者快速实践网络编程，搭建属于自己的服务器.
 
+个人优化
+-------
+学习本项目源码时，边看边用正在学的 C++11 特性做了一些改进：
+
+* 线程池从 pthread 换成 std::thread，用 lambda 替代原来的 static 桥接函数
+* 全项目 NULL 替换为 nullptr
+* 修复 cb_func 中 assert 放在指针解引用后面的问题
+
+> 原项目地址：https://github.com/qinguoyi/TinyWebServer
+
 * 使用 **线程池 + 非阻塞socket + epoll(ET和LT均实现) + 事件处理(Reactor和模拟Proactor均实现)** 的并发模型
 * 使用**状态机**解析HTTP请求报文，支持解析**GET和POST**请求
 * 访问服务器数据库实现web端用户**注册、登录**功能，可以请求服务器**图片和视频文件**
