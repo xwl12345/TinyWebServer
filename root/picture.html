@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>awsl</title>
-    </head>
-    <body><br/>
-<br/>
-<div align="center"><font size="5"> <strong>你居然想看图，不想关注我</strong></font></div>
-<br/>
-<!--<div  align="center">a w s l</div>-->
-<br/>
-<br/>
-<div align="center"><img src="./xxx.jpg" title="awsl"/></div>
+<head>
+    <meta charset="UTF-8">
+    <title>图片展示</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            flex-direction: column; padding: 40px 20px;
+        }
+        .title { font-size: 18px; color: #aaaadd; margin-bottom: 24px; }
+        img { max-width: 90%; border-radius: 8px; box-shadow: 0 4px 30px rgba(0,0,0,0.4); }
+        .back { margin-top: 24px; font-size: 13px; color: #7777aa; text-decoration: none; }
+        .back:hover { color: #aaaadd; }
+    </style>
+</head>
+<body>
+    <div class="title">图片展示</div>
+    <img src="./xxx.jpg" alt="demo image">
+    <a href="javascript:history.back()" class="back">← 返回</a>
+</body>
 </html>

@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Sign in</title>
-    </head>
-    <body>
-<br/>
-<br/>
-    <div align="center"><font size="5"> <strong>登录</strong></font></div>
-    <br/>
-        <div class="login">
-                <form action="2CGISQL.cgi" method="post">
-                        <div align="center"><input type="text" name="user" placeholder="用户名" required="required"></div><br/>
-                        <div align="center"><input type="password" name="password" placeholder="登录密码" required="required"></div><br/>
-                        <div align="center"><button type="submit">确定</button></div>
-                </form>
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            color: #ccd;
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px; padding: 40px 36px; text-align: center;
+            max-width: 380px; width: 90%;
+        }
+        .card h2 { font-size: 22px; color: #e0e0ff; margin-bottom: 24px; }
+        .card input {
+            width: 100%; padding: 10px 14px; margin-bottom: 14px;
+            border-radius: 6px; border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.06); color: #ddd; font-size: 14px;
+            outline: none;
+        }
+        .card input:focus { border-color: #4466cc; }
+        .card button {
+            width: 100%; padding: 10px; border-radius: 6px; font-size: 14px;
+            cursor: pointer; border: none; background: #4466cc; color: #fff;
+            margin-top: 6px;
+        }
+        .card button:hover { background: #5577dd; }
+        .back { display: block; margin-top: 16px; font-size: 12px; color: #7777aa; text-decoration: none; }
+        .back:hover { color: #aaaadd; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>登录</h2>
+        <form action="2CGISQL.cgi" method="post">
+            <input type="text" name="user" placeholder="用户名" required>
+            <input type="password" name="password" placeholder="密码" required>
+            <button type="submit">登录</button>
+        </form>
+        <a href="javascript:history.back()" class="back">← 返回</a>
+    </div>
+</body>
 </html>
-
