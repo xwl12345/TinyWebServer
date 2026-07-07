@@ -4,7 +4,7 @@ server
 *.out
 
 # 日志文件
-2026_*_ServerLog/
+2026_*_ServerLog
 ServerLog/
 
 # IDE
